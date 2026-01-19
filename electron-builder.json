@@ -1,0 +1,47 @@
+{
+  "appId": "com.pastime.basketball-scoreboard",
+  "productName": "Basketball Scoreboard",
+  "nodeGypRebuild": false,
+  "npmRebuild": false,
+  "buildDependenciesFromSource": false,
+  "asar": false,
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "client/public/**/*",
+    "node_modules/**/*",
+    "electron/sync-config.json",
+    "!node_modules/**/build/**/*",
+    "!node_modules/**/*.node"
+  ],
+  "extraResources": [
+    {
+      "from": "node_modules/better-sqlite3/build/Release/better_sqlite3.node",
+      "to": "better_sqlite3.node"
+    }
+  ],
+  "win": {
+    "target": ["nsis"],
+    "icon": "client/public/icon-512.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "mac": {
+    "target": ["dmg"],
+    "icon": "client/public/icon-512.png",
+    "category": "public.app-category.sports"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "client/public/icon-512.png",
+    "category": "Sports"
+  }
+}
