@@ -1,0 +1,6 @@
+{
+  "cloudUrl": "https://basketball-scoreboard.replit.app",
+  "syncKey": "ENTER_YOUR_KEY_HERE",
+  "enabled": false,
+  "_instructions": "Copy this file to your AppData folder and replace ENTER_YOUR_KEY_HERE with your actual sync key"
+}
